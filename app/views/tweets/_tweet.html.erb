@@ -1,0 +1,22 @@
+<div class="card card-body">
+  <div><%= tweet.body %></div>
+
+  <div class="mt-2">
+    <%= link_to "Like (#{tweet.likes})",
+                tweet_like_path(tweet),
+                method: :post,
+                class: "btn btn-sm btn-outline-success" %>
+
+    <%= link_to "Retweet (#{tweet.retweets})",
+                tweet_retweet_path(tweet),
+                method: :post,
+                class: "btn btn-sm btn-outline-info" %>
+
+    <%= link_to 'Edit', edit_tweet_path(tweet),
+                class: "btn btn-sm btn-outline-primary" %>
+
+    <%= link_to 'Destroy', tweet_path(tweet), method: :delete,
+                data: { confirm: 'Are you sure?' },
+                class: "btn btn-sm btn-outline-danger" %>
+  </div>
+</div>
