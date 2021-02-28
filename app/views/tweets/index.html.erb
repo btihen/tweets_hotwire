@@ -6,4 +6,11 @@
 <%= render "tweets/form", tweet: @tweet %>
 
 <h4>Tweet Feed</h4>
-<%= render @tweets %>
+
+<!-- connects to the backend broadcast (via a channel) -->
+<%= turbo_stream_from "tweets" %>
+
+<!-- frame that receives the taged data -->
+<%= turbo_frame_tag "tweets" do %>
+  <%= render @tweets %>
+<% end %>
