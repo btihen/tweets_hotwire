@@ -1,3 +1,6 @@
+<!-- this tag with `tweet` instead of 'tweets' identifies an individual tweet -->
+<%= turbo_frame_tag tweet do %>
+
 <div class="card card-body">
   <div><%= tweet.body %></div>
 
@@ -20,3 +23,5 @@
                 class: "btn btn-sm btn-outline-danger" %>
   </div>
 </div>
+
+<% end %>
