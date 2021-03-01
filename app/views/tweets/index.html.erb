@@ -2,13 +2,18 @@
 
 <h1>Tweets</h1>
 
-<h4>New Tweet</h4>
-<%= render "tweets/form", tweet: @tweet %>
-
-<h4>Tweet Feed</h4>
-
 <!-- connects to the backend broadcast (via a channel) -->
 <%= turbo_stream_from "tweets" %>
+
+<h4 class="mt-3">New Tweet</h4>
+
+<!-- the form needs to be in a frame - otherwise we can't edit in place -->
+<%= turbo_frame_tag "tweet-form" do %>
+  <%= render "tweets/form", tweet: @tweet %>
+<% end %>
+
+
+<h4 class="mt-3">Tweet Feed</h4>
 
 <!-- frame that receives the taged data -->
 <%= turbo_frame_tag "tweets" do %>
