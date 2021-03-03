@@ -16,7 +16,8 @@
   <%= form.text_area :body %>
 </div>
 
-<div class="actions">
-  <%= form.submit %>
+<div class="action">
+  <%= form.submit class: "btn btn-sm btn-outline-success" %>
+  <%= link_to "Cancel", @tweet, class: "btn btn-sm btn-outline-danger" %>
 </div>
 <% end %>
