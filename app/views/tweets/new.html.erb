@@ -1,5 +1,6 @@
 <h1>New Tweet</h1>
+<div class="card card-body">
+  <%= render 'form', tweet: @tweet %>
+</div>
 
-<%= render 'form', tweet: @tweet %>
-
-<%= link_to 'Back', tweets_path %>
+  <%= link_to 'Back', tweets_path %>

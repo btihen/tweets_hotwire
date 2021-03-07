@@ -9,13 +9,15 @@
 
 <!-- the form needs to be in a frame - otherwise we can't edit in place -->
 <%= turbo_frame_tag "tweet-form" do %>
+<div class="card card-body">
   <%= render "tweets/form", tweet: @tweet %>
+</div>
 <% end %>
 
 
-<h4 class="mt-3">Tweet Feed</h4>
+  <h4 class="mt-3">Tweet Feed</h4>
 
-<!-- frame that receives the taged data -->
-<%= turbo_frame_tag "tweets" do %>
+  <!-- frame that receives the taged data -->
+  <%= turbo_frame_tag "tweets" do %>
   <%= render @tweets %>
-<% end %>
+  <% end %>
