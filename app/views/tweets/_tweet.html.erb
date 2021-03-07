@@ -9,10 +9,9 @@
   <div class="btn-toolbar mt-4" role="toolbar">
 
     <div class="btn-group mr-2" role="group">
-  <div class="mt-2">
-    <%= link_to "Like (#{tweet.likes})",
+      <%= link_to "Like (#{tweet.likes})",
                 tweet_like_path(tweet),
-                method: :post,
+                method: :patch,
                 class: "btn btn-sm btn-outline-success" %>
 
       <%= link_to "Retweet (#{tweet.retweets})",
