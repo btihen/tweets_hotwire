@@ -1,14 +1,4 @@
-<%= turbo_stream_from tweet %>
 
-<!-- this tag with `tweet` instead of 'tweets' identifies an individual tweet -->
-<%= turbo_frame_tag tweet do %>
-  <div class="card card-body">
-    <div><%= tweet.body %></div>s
-    <%= render "tweets/actions", tweet: tweet %>
-  </div>
-<% end %>
-
-  <!--
   <div class="btn-toolbar mt-4" role="toolbar">
 
     <div class="btn-group mr-2" role="group">
@@ -36,4 +26,3 @@
     </div>
 
   </div>
-  -->
